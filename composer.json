@@ -13,20 +13,27 @@
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "7.4"
+            "php": "8.0"
         }
     },
     "require": {
-        "php": "^7.4"
+        "php": "^8.0",
+        "ext-intl": "*",
+        "php-ds/php-ds": "^1.2"
     },
     "autoload": {
         "psr-4": {
-            "Par\\Core\\": "src"
+            "Par\\Core\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ParTest\\Core\\": "test/"
         }
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.2.x-dev"
+            "dev-master": "0.3.x-dev"
         }
     }
 }
