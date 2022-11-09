@@ -12,21 +12,8 @@ use Par\Core\Hashable;
  */
 final class GenericHashable implements Hashable
 {
-    public function __construct(private int|string|bool|null|float $value)
+    public function __construct(private readonly int|string|bool|null|float $value)
     {
-    }
-
-    /**
-     * @inheritDoc
-     * @psalm-assert-if-true GenericHashable $other
-     */
-    public function equals(mixed $other): bool
-    {
-        if ($other instanceof self) {
-            return $this->value === $other->value;
-        }
-
-        return false;
     }
 
     /**

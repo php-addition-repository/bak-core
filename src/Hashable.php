@@ -11,9 +11,8 @@ namespace Par\Core;
  * that two objects that are considered equal by an implicit definition would not be treated as equal because they are
  * not the same instance.
  */
-interface Hashable extends \Ds\Hashable
+interface Hashable
 {
-
     /**
      * Produces a scalar or null value to be used as the object's hash, which determines
      * where it goes in the hash table. While this value does not have to be
@@ -23,19 +22,4 @@ interface Hashable extends \Ds\Hashable
      * @psalm-mutation-free
      */
     public function hash(): bool|float|int|string|null;
-
-    /**
-     * Determines if two objects should be considered equal. Both objects will be instances of the same class but may
-     * not be the same instance.
-     *
-     * @example              "packages/core/test/Fixtures/GenericHashable.php" 16 Implementation example
-     *
-     * @param mixed $other The referenced value with which to compare
-     *
-     * @return bool True if this object is the same as the other argument
-     * @psalm-mutation-free
-     * @noinspection         PhpParameterNameChangedDuringInheritanceInspection
-     * @psalm-assert-if-true static $other
-     */
-    public function equals(mixed $other): bool;
 }

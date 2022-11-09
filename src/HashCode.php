@@ -8,11 +8,10 @@ use IntlChar;
 use TypeError;
 
 /**
- * Collection of static methods to easily transform a value of any type to an 32 bit integer representation.
+ * Collection of static methods to easily transform a value of any type to an 32-bit integer representation.
  */
 final class HashCode
 {
-
     public const MAX_RECURSION_DEPTH = 10;
 
     /**
